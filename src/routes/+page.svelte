@@ -1,9 +1,13 @@
+<script>
+    import Card from "$lib//Card.svelte";
+</script>
+
 <h1>Welcome to SvelteKit</h1>
 <div class="cards">
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
+    <Card><p class="card-content">About Me</p></Card>
+    <Card><p class="card-content">About my Projects</p></Card>
+    <Card><p class="card-content">Some Jokes</p></Card>
+    <Card><p class="card-content">Legal Stuff</p></Card>
 </div>
 <p>Visit <a href="/about">the About Page</a> to read about me</p>
 <p>Visit <a href="/projects">the Projects Page</a> to read about my projects</p>
@@ -22,6 +26,15 @@ p {
     color: #41bd4c;
 }
 
+.card-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+}
+
 .cards {
     display: flex;
     flex-wrap: wrap;
@@ -31,17 +44,5 @@ p {
     gap: 0.5rem;
     width: 90%;
     padding: 2rem;
-    --yPos: 100px;
-    --xPox: 100px;
-    .card{
-        width: 20rem;
-        height: 15rem;
-        background: radial-gradient(
-            100rem circle at var(--xPox) var(--yPos),
-            rgba(#4411bb, 0.6),
-            transparent 10%
-        );
-        border-radius: 0.5rem;
-    }
 }
 </style>
